@@ -1,1 +1,59 @@
 @import "vars1";
+
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background: url('../img/header-bg.png');
+	background-color: $aqua;
+	height: 100vh;
+	padding: 20px 0;
+}
+
+.navigation {
+	margin-bottom: 270px;
+}
+.logo {
+
+}
+
+.menu {
+
+}
+
+.menu__item a {
+	font-size: $base-size;
+	line-height: 22px;
+	color: $white;
+	font-family: 'Open Sans';
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.header-info__title {
+	font-size: $huge-size;
+	letter-spacing: 4px;
+	color: $white;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 70px;
+}
+
+.header-info__text {
+	font-size: $middle-size;
+	color: $white;
+	text-align: center;
+}
+.social__icon {
+	margin-right: 15px;
+}
