@@ -1,0 +1,210 @@
+.vova-latest {
+  padding: 140px 0;
+  background: linear-gradient(45deg, #3c7fd4 0%, #24ccfa 100%);
+  background-size: cover;
+  position: relative;
+  font-family: $main-font;
+  min-height: 100vh;
+  @include flex-row(center, center);
+  overflow: hidden;
+
+  @media screen and(max-width: 767px) {
+    padding: 60px 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/news-bg.png') no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    @include text($large-size, 500, $white);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin: 0;
+
+    @media screen and(max-width: 767px) {
+      font-size: 36px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 100%;
+      max-width: 100px;
+      border-top: 2px solid $white;
+      opacity: .5;
+    }
+  }
+
+  &__card {
+    background-color: $white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: all .2s ease;
+
+    &::before {
+      $size: 80px;
+      content: "+";
+      color: $white;
+      font-size: 40px;
+      position: absolute;
+      left: 40%;
+      transform: translateY(-50%);
+      top: 20%;
+      display: none;
+      width: $size;
+      height: $size;
+      border: 1px solid $white;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &:hover {
+      &::before {
+        @include flex-col(center, center);
+      }
+    }
+  }
+
+  &__card-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 65%;
+  }
+
+  &__card-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__card-info {
+    padding: 30px 20px;
+  }
+
+  &__card-title {
+    @include text($big-size, 700, $dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  &__card-text {
+    @include text($middle-size, 400, $dirt);
+    line-height: 1.8;
+    margin-bottom: 35px;
+  }
+
+  &__card-footer {
+    @include flex-row(flex-start, center);
+  }
+
+  &__card-photo-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 19.4%;
+    max-width: 60px;
+    margin-right: 20px;
+  }
+
+  &__card-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__card-author {
+    @include text($middle-size, 400, $dark);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &__card-data {
+    @include text($base-size, 400, $aqua);
+  }
+
+  .owl-prev,
+  .owl-next {
+    $size: 40px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 1px solid $white !important;
+    opacity: .7;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+
+    @media screen and(max-width: 1199px) {
+      display: none;
+    }
+
+    &>* {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-55%) translateX(-50%);
+      color: $white;
+      font-size: 30px;
+    }
+  }
+
+  .owl-prev {
+    left: -80px;
+  }
+
+  .owl-next {
+    right: -80px;
+  }
+
+  .owl-dots {
+    text-align: center;
+
+    @media screen and(max-width: 767px) {
+      display: none !important;
+    }
+  }
+
+  .owl-dot {
+    $size: 8px;
+    border: 1px solid $white !important;
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    margin-right: 50px;
+  }
+
+  .owl-dot.active {
+    background-color: $white;
+  }
+
+  .owl-stage-outer {
+    margin-bottom: 60px;
+
+    @media screen and(max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
+}
