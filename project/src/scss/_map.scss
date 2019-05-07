@@ -1,0 +1,154 @@
+.map {
+	font-family: 'Open Sans', sans-serif;
+	color: $dark;
+	position: relative;
+	z-index: 1;
+
+	.shadow {
+		background-color: $white;
+		box-shadow: 0 -4px 30px rgba(133, 133, 133, 0.2);
+		padding: 80px 60px;
+		position: absolute;
+		top: 300px;
+		left: 20%;
+		z-index: 3;
+	}
+
+	&__title {
+		font-size: $large-size;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100px;
+			height: 1px;
+			background-color: $dark;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		@media screen and (min-width: 992px) {
+			font-size: $base-size;
+		}
+
+		@media screen and (min-width: 1200px) {
+			font-size: $middle-size;
+
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.fas,
+	.far {
+		color: $purple1;
+		margin-right: 5px;
+	}
+
+	/* --- FORM --- */
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		.all-form {
+			border: none;
+			border-bottom: 1px solid rgba($dark, 0.2);
+			padding-bottom: 20px;
+			color: $dark;
+			outline: none;
+
+			&:focus::-webkit-input-placeholder {
+				border-bottom: 1px solid rgba($dark, 1);
+				color: $dark;
+			}
+		}
+
+		::-webkit-input-placeholder {
+			color: rgba($dark, 0.5);
+			font-size: $middle-size;
+			font-weight: 400;
+		}
+
+		::-webkit-input-placeholder:focus {
+			color: red;
+		}
+
+		::-moz-placeholder {
+			color: rgba($dark, 0.5);
+			font-size: $middle-size;
+			font-weight: 400;
+
+			&:focus {
+				color: rgba($dark, 1);
+			}
+		}
+
+		/* Firefox 19+ */
+		:-moz-placeholder {
+			color: rgba($dark, 0.5);
+			font-size: $middle-size;
+			font-weight: 400;
+
+			&:focus {
+				color: rgba($dark, 1);
+			}
+		}
+
+		/* Firefox 18- */
+		:-ms-input-placeholder {
+			color: rgba($dark, 0.5);
+			font-size: $middle-size;
+			font-weight: 400;
+
+			&:focus {
+				color: rgba($dark, 1);
+			}
+		}
+
+		&-btn {
+			width: 140px;
+			color: $dark;
+			font-size: $base-size;
+			font-weight: 700;
+			text-transform: uppercase;
+			background-color: transparent;
+			border: 1px solid $dark;
+			padding: 20px 40px;
+		}
+	}
+
+	&-btn {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+/* --- map --- */
+
+#map {
+	width: 100%;
+	min-height: 100vh;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
