@@ -1,0 +1,81 @@
+@import "vars1";
+
+.section-gallery__olga {
+	min-height: 100vh;
+}
+.container {
+	max-width: 1170px;
+}
+.title-h3 {
+	color:$dark;
+	font-size: $large-size;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	position: relative;
+
+	&::before {
+		content: " ";
+		border-bottom: 1px solid $dark;
+		min-width: 100px;
+		position: absolute;
+		top: -30%;
+		left:43.5%;
+		// transform: translateX(-50%);
+	}
+}
+.title-h4 {
+	text-align: center;
+	width: 100%;
+
+}
+.container-fluid {
+	padding: 50px 0;
+	align-items: center;
+}
+.portfolio__img {
+	padding: 5px 0;
+	width: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	object-fit: cover;
+}
+.container {
+	padding: 0;
+	height: 100vh;
+}
+.row {
+	padding: 0;
+	width: 100%;
+}
+
+
+.wrapper1 {
+	position: relative;
+	width: 100%;
+	padding-left:50%;
+	padding-top: 100%;
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 95%;
+}
+.gradient-btn {
+	text-transform: uppercase;
+	border: 1px solid $dark;
+	text-align: center;
+	padding: 10px 50px;
+	width: 100%;
+	color: $dark;
+
+	&:hover {
+		color: $aqua;
+		text-decoration: none;
+		border: 1px solid $aqua;
+		cursor:pointer;
+	}
+}
