@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i");
+html,
+body {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background: url("../img/header-bg.png");
+	background-color: #55b7ff;
+	height: 100vh;
+	padding: 20px 0;
+}
+
+.navigation {
+	margin-bottom: 270px;
+}
+
+.menu__item a {
+	font-size: 14px;
+	line-height: 22px;
+	color: #fff;
+	font-family: "Open Sans";
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.header-info__title {
+	font-size: 80px;
+	letter-spacing: 4px;
+	color: #fff;
+	font-family: "Open Sans";
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 70px;
+}
+
+.header-info__text {
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+.social__icon {
+	margin-right: 15px;
+}
